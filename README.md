@@ -15,5 +15,11 @@ echo "[000] - Hello git-cherry-pick!" > hello-git-cherry-pick.txt
 git add hello-git-cherry-pick.txt
 git commit -m "Initial commit"
 ```
-
-
+Change back to the master branch and commit these changes:
+```
+git checkout master
+echo "[002] - Hello master branch updated before cherry-pick!" >> hello-git-cherry-pick.txt
+git add hello-git-cherry-pick.txt
+git add README.md
+git commit -m "A"
+```
