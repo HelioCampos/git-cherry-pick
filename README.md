@@ -31,6 +31,14 @@ git add hello-git-cherry-pick.txt
 git add README.md
 git commit -m "A"
 ```
+Change back to branch my_new_branch and create a new commit with message "BB":
+```
+git checkout -b my_new_branch
+echo "[003] - BB - This is the second modification made in the branch called [my_new_branch]" >> hello-git-cherry-pick.txt
+git add hello-git-cherry-pick.txt
+git add README.md
+git commit -m "BB"
+```
 ## Cherry pick
 Checkout to the branch "my_new_branch" and get the ID of the commit to be cherry-picked:
 ```
