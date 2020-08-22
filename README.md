@@ -2,8 +2,10 @@
 
 This tutorial explains how to use a git-cherry-pick to bring specifics commits from one branch to another.
 
+:warning: If the files that contains the changes to be cherry-picked were modified in the destination branch then you wil probably need to resolve conflicks.
+
 ## Initial configuration
-Create a new repository locally
+Create a new repository locally:
 ```
 mkdir git-cherry-pick
 cd !$
@@ -15,10 +17,10 @@ echo "[000] - Hello git-cherry-pick!" > hello-git-cherry-pick.txt
 git add hello-git-cherry-pick.txt
 git commit -m "Initial commit"
 ```
-Create a new branch, change branches and write 1 commit to it with the message "AA"
+Create a new branch, change branches and write 1 commit to it with the message "AA":
 ```
 git checkout -b my_new_branch
-echo "[001] - AA - This is the fisrt modification made in the branch called [my_new_branch]" >> hello-git-cherry-pick.txt
+echo "[001] - AA - This is the fisrt modification made in [my_new_branch]" >> hello-git-cherry-pick.txt
 git add hello-git-cherry-pick.txt
 git add README.md
 git commit -m "AA"
@@ -34,7 +36,7 @@ git commit -m "A"
 Change back to branch my_new_branch and create a new commit with message "BB":
 ```
 git checkout -b my_new_branch
-echo "[003] - BB - This is the second modification made in the branch called [my_new_branch]" >> hello-git-cherry-pick.txt
+echo "[003] - BB - This is the second modification made in [my_new_branch]" >> hello-git-cherry-pick.txt
 git add hello-git-cherry-pick.txt
 git add README.md
 git commit -m "BB"
@@ -62,3 +64,5 @@ Checkout to maste rbanch again and make the cherry-pick:
 git checkout master
 git cherry-pick $cherry_pick_id
 ```
+
+Have fun!
