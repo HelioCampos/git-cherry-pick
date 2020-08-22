@@ -43,3 +43,14 @@ git checkout master
 git cherry-pick $cherry_pick_id
 ```
 This will apply the same changed but apply a new commit
+## Cherry pick again
+Checkout to the branch "my_new_branch" and get the ID of the commit to be cherry-picked:
+```
+git checkout my_new_branch
+cherry_pick_id=$(git log --oneline | grep BB | cut -d" " -f 1)
+```
+Checkout to maste rbanch again and make the cherry-pick:
+```
+git checkout master
+git cherry-pick $cherry_pick_id
+```
