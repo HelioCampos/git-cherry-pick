@@ -1,2 +1,3 @@
 [000] - Hello git-cherry-pick!
+[001] - AA - This is the fisrt modification made in the branch called [my_new_branch]
 [002] - Hello master branch updated before cherry-pick!
