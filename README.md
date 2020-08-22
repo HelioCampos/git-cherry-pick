@@ -1,4 +1,4 @@
-# Git Cherry Pick
+# Git Cherry Pick :one:
 
 This tutorial explains how to use a git-cherry-pick to bring specifics commits from one branch to another.
 
